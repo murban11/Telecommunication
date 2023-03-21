@@ -12,7 +12,8 @@ private:
     void convert_to_binary(int sign, int* message);
     void calculate_parity(int* parity_bits, int* message, int matrix_H[8][16]);
     void save_letter(int* table, FILE* text_encoded);
-    void letter_to_binary(int bit, int letter);
+    void letter_to_binary(int table[], int letter, int bit_index);
+    void convert_from_binary(int* table, FILE* text_decoded);
 
 public:
     void encode(int matrix_H[8][16], FILE* text_received, FILE* text_encoded);
